@@ -21,4 +21,13 @@ class DefaultController extends Controller
         ] */
         );
     }
+
+    /**
+     * @Route("/maison", name="maison")
+     */
+    public function maisonAction(Request $request)
+    {
+        // replace this example code with whatever you need
+        return $this->render('default/maison.html.twig');
+    }
 }
