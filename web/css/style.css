@@ -3,26 +3,96 @@
 Primary style
 
 -------------------------------- */
+@font-face {
+    font-family: "SansitaOne";
+    src: url('../fonts/SansitaOneRegular.ttf');
+}
+@font-face {
+    font-family: "LiberationSans";
+    src: url('../fonts/LiberationSans-Regular.ttf');
+}
+
 *, *:after, *:before {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
 }
 
 body {
-  font-size: 100%;
-  font-family: "Open Sans", sans-serif;
-  color: #030d18;
-  background-color: #f6f6f6;
+    font-size: 100%;
+    font-family: "LiberationSans";
+    color: #030d18;
+    background-color: #f6f6f6;
+    min-height: 100%;
 }
 
 a {
-  color: #fff;
-  text-decoration: none;
+    color: #fff;
+    text-decoration: none;
 }
 
 img {
-  max-width: 100%;
+    max-width: 100%;
+}
+
+img.responsive {
+    widht: 100%;
+    height: auto;
+}
+
+.button {
+    margin-top:30px;
+    display: inline-block;
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+    position: relative;
+    cursor: pointer;
+    padding: 0 20px 0 73px;
+    border: none;
+    line-height: 3em;
+    color: rgba(255,255,255,0.9);
+    background: #99cc33;
+    -webkit-transition: top 50ms cubic-bezier(0.42, 0, 0.58, 1);
+    -moz-transition: top 50ms cubic-bezier(0.42, 0, 0.58, 1);
+    -o-transition: top 50ms cubic-bezier(0.42, 0, 0.58, 1);
+    transition: top 50ms cubic-bezier(0.42, 0, 0.58, 1);
+}
+
+.button:before {
+    ddisplay: inline-block;
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+    width: 50px;
+    height: 100%;
+    position: absolute;
+    content: "";
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    border: 0 solid #018dc4;
+    color: rgba(0,0,0,0.9);
+    -o-text-overflow: clip;
+    text-overflow: clip;
+    background: url("../img/home/phone-contact.png"), rgba(0,0,0,0.05);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    -webkit-background-origin: content-box;
+    background-origin: content-box;
+    -webkit-background-clip: border-box;
+    background-clip: border-box;
+    -webkit-background-size: 30px auto;
+    background-size: 30px auto;
+    text-shadow: -1px -1px 0 rgba(15,73,168,0.66) ;
+    -webkit-transition: all 300ms cubic-bezier(0.42, 0, 0.58, 1);
+    -moz-transition: all 300ms cubic-bezier(0.42, 0, 0.58, 1);
+    -o-transition: all 300ms cubic-bezier(0.42, 0, 0.58, 1);
+    transition: all 300ms cubic-bezier(0.42, 0, 0.58, 1);
 }
 
 /* -------------------------------- 
@@ -31,234 +101,257 @@ Modules - reusable parts of our design
 
 -------------------------------- */
 .cd-container {
-  /* this class is used to give a max-width to the element it is applied to, and center it horizontally when it reaches that max-width */
-  width: 90%;
-  max-width: 1170px;
-  margin: 0 auto;
+    /* this class is used to give a max-width to the element it is applied to, and center it horizontally when it reaches that max-width */
+    max-width: 1168px;
+    margin: 0 auto !important;
 }
+
 .cd-container:after {
-  content: "";
-  display: table;
-  clear: both;
+    content: "";
+    display: table;
+    clear: both;
 }
 
 .has-top-margin {
-  /* this class is given - using jQuery - to the .cd-main-content following the .cd-secondary-nav when it becomes fixed */
+    /* this class is given - using jQuery - to the .cd-main-content following the .cd-secondary-nav when it becomes fixed */
 }
+
 @media only screen and (min-width: 1170px) {
-  .has-top-margin {
-    -webkit-animation: animate-margin-top 0.3s;
-    -moz-animation: animate-margin-top 0.3s;
-    animation: animate-margin-top 0.3s;
-    margin-top: 70px;
-  }
+    .has-top-margin {
+        -webkit-animation: animate-margin-top 0.3s;
+        -moz-animation: animate-margin-top 0.3s;
+        animation: animate-margin-top 0.3s;
+        margin-top: 70px;
+    }
 }
 
 @-webkit-keyframes animate-margin-top {
-  0% {
-    margin-top: 100px;
-  }
+    0% {
+        margin-top: 100px;
+    }
 
-  100% {
-    margin-top: 70px;
-  }
+    100% {
+        margin-top: 70px;
+    }
 }
+
 @-moz-keyframes animate-margin-top {
-  0% {
-    margin-top: 100px;
-  }
+    0% {
+        margin-top: 100px;
+    }
 
-  100% {
-    margin-top: 70px;
-  }
+    100% {
+        margin-top: 70px;
+    }
 }
+
 @keyframes animate-margin-top {
-  0% {
-    margin-top: 100px;
-  }
+    0% {
+        margin-top: 100px;
+    }
 
-  100% {
-    margin-top: 70px;
-  }
+    100% {
+        margin-top: 70px;
+    }
 }
-/* -------------------------------- 
+
+/* --------------------------------
 
 Navigation Mobile
 
 -------------------------------- */
 header {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 50px;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
-  background-color: #030d18;
-  z-index: 3;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+    background-color: #030d18;
+    z-index: 3;
 }
+
 @media only screen and (min-width: 768px) {
-  header {
-    height: 70px;
-    background-color: transparent;
-    box-shadow: none;
-  }
+    header {
+        height: 70px;
+        background-color: transparent;
+        box-shadow: none;
+    }
 }
 
 #cd-logo {
-  float: left;
-  margin: 13px 0 0 5%;
+    float: left;
+    margin: 13px 0 0 5%;
 }
+
 #cd-logo img {
-  display: block;
+    display: block;
 }
+
 @media only screen and (min-width: 768px) {
-  #cd-logo {
-    margin: 23px 0 0 5%;
-  }
+    #cd-logo {
+        margin: 23px 0 0 5%;
+    }
 }
+
 @media only screen and (min-width: 1170px) {
-  #cd-logo.is-hidden {
-    /* assign a position fixed and move outside the viewport (on the left) */
-    opacity: 0;
-    position: fixed;
-    left: -20%;
-    margin-left: 0;
-    -webkit-transition: left 0.3s, opacity 0.3s;
-    -moz-transition: left 0.3s, opacity 0.3s;
-    transition: left 0.3s, opacity 0.3s;
-  }
-  #cd-logo.is-hidden.slide-in {
-    /* slide in when the secondary navigation gets fixed */
-    left: 5%;
-    opacity: 1;
-  }
+    #cd-logo.is-hidden {
+        /* assign a position fixed and move outside the viewport (on the left) */
+        opacity: 0;
+        position: fixed;
+        left: -20%;
+        margin-left: 0;
+        -webkit-transition: left 0.3s, opacity 0.3s;
+        -moz-transition: left 0.3s, opacity 0.3s;
+        transition: left 0.3s, opacity 0.3s;
+    }
+
+    #cd-logo.is-hidden.slide-in {
+        /* slide in when the secondary navigation gets fixed */
+        left: 5%;
+        opacity: 1;
+    }
 }
 
 .cd-primary-nav {
-  /* mobile first - navigation hidden by default, triggered by tap/click on navigation icon */
-  position: relative;
-  float: right;
-  margin-right: 5%;
-  width: 44px;
-  height: 100%;
-  background: url("../img/cd-icon-menu.svg") no-repeat center center;
-  background-size: 44px 44px;
+    /* mobile first - navigation hidden by default, triggered by tap/click on navigation icon */
+    position: relative;
+    float: right;
+    margin-right: 5%;
+    width: 44px;
+    height: 100%;
+    background: url("../img/cd-icon-menu.svg") no-repeat center center;
+    background-size: 44px 44px;
 }
+
 .cd-primary-nav ul {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  -webkit-transform: translateY(-100%);
-  -moz-transform: translateY(-100%);
-  -ms-transform: translateY(-100%);
-  -o-transform: translateY(-100%);
-  transform: translateY(-100%);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    -webkit-transform: translateY(-100%);
+    -moz-transform: translateY(-100%);
+    -ms-transform: translateY(-100%);
+    -o-transform: translateY(-100%);
+    transform: translateY(-100%);
 }
+
 .cd-primary-nav ul.is-visible {
-  -webkit-transform: translateY(50px);
-  -moz-transform: translateY(50px);
-  -ms-transform: translateY(50px);
-  -o-transform: translateY(50px);
-  transform: translateY(50px);
+    -webkit-transform: translateY(50px);
+    -moz-transform: translateY(50px);
+    -ms-transform: translateY(50px);
+    -o-transform: translateY(50px);
+    transform: translateY(50px);
 }
+
 .cd-primary-nav a {
-  display: block;
-  height: 50px;
-  line-height: 50px;
-  padding-left: 5%;
-  background: #000101;
-  border-top: 1px solid #051426;
-  color: #f0eee1;
+    display: block;
+    height: 50px;
+    line-height: 50px;
+    padding-left: 5%;
+    background: #000101;
+    border-top: 1px solid #051426;
+    color: #f0eee1;
 }
 
-
-/* -------------------------------- 
+/* --------------------------------
 
 Intro Top
 
 -------------------------------- */
 #cd-intro {
-  position: relative;
-  height: 300px;
-  background: url(../img/intro-background.jpg) no-repeat center center;
-  background-size: cover;
-  z-index: 2;
+    position: relative;
+    height: 300px;
+    background: url(../img/intro-background.jpg) no-repeat center center;
+    background-size: cover;
+    z-index: 2;
 }
+
 #cd-intro #cd-intro-tagline {
-  width: 90%;
-  max-width: 1170px;
-  margin: 0 auto;
-  text-align: center;
-  padding-top: 120px;
+    width: 90%;
+    max-width: 1170px;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 120px;
 }
+
 #cd-intro h1 {
-  font-size: 24px;
-  font-size: 1.5rem;
-  font-weight: 300;
-  color: #030d18;
-  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    font-size: 24px;
+    font-size: 1.5rem;
+    font-weight: 300;
+    color: #030d18;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 }
+
 @media only screen and (min-width: 768px) {
-  #cd-intro {
-    height: 400px;
-  }
-  #cd-intro #cd-intro-tagline {
-    padding-top: 160px;
-  }
-  #cd-intro h1 {
-    font-size: 32px;
-    font-size: 2rem;
-  }
+    #cd-intro {
+        height: 400px;
+    }
+
+    #cd-intro #cd-intro-tagline {
+        padding-top: 160px;
+    }
+
+    #cd-intro h1 {
+        font-size: 32px;
+        font-size: 2rem;
+    }
 }
+
 @media only screen and (min-width: 1170px) {
-  #cd-intro {
-    height: 600px;
-  }
-  #cd-intro #cd-intro-tagline {
-    padding-top: 250px;
-  }
+    #cd-intro {
+        height: 600px;
+    }
+
+    #cd-intro #cd-intro-tagline {
+        padding-top: 250px;
+    }
 }
 
 .cd-btn {
-  display: inline-block;
-  padding: 1em 1.8em;
-  background-color: rgba(245, 72, 74, 0.9);
-  margin-top: 1em;
-  border-radius: 20em;
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  color: white;
+    display: inline-block;
+    padding: 1em 1.8em;
+    background-color: rgba(245, 72, 74, 0.9);
+    margin-top: 1em;
+    border-radius: 20em;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color: white;
 }
+
 .no-touch .cd-btn:hover {
-  background-color: #f5484a;
+    background-color: #f5484a;
 }
+
 @media only screen and (min-width: 1170px) {
-  header #cd-logo{
-    display:none;
-  }
-  header nav{
-    display:none;
-  }
-  .cd-btn.is-hidden {
-    /* assign a position fixed and move outside the viewport (on the right) */
-    opacity: 0;
-    position: fixed;
-    right: -20%;
-    top: 0;
-    padding: .8em 1.2em;
-    margin: 14px 0 0;
-    -webkit-transition: right 0.3s, opacity 0.3s;
-    -moz-transition: right 0.3s, opacity 0.3s;
-    transition: right 0.3s, opacity 0.3s;
-  }
-  .cd-btn.is-hidden.slide-in {
-    /* slide in when the secondary nav gets fixed */
-    right: 5%;
-    opacity: 1;
-  }
+    header #cd-logo {
+        display: none;
+    }
+
+    header nav {
+        display: none;
+    }
+
+    .cd-btn.is-hidden {
+        /* assign a position fixed and move outside the viewport (on the right) */
+        opacity: 0;
+        position: fixed;
+        right: -20%;
+        top: 0;
+        padding: .8em 1.2em;
+        margin: 14px 0 0;
+        -webkit-transition: right 0.3s, opacity 0.3s;
+        -moz-transition: right 0.3s, opacity 0.3s;
+        transition: right 0.3s, opacity 0.3s;
+    }
+
+    .cd-btn.is-hidden.slide-in {
+        /* slide in when the secondary nav gets fixed */
+        right: 5%;
+        opacity: 1;
+    }
 }
 
 /* -------------------------------- 
@@ -267,160 +360,181 @@ Secondary Fixed Navigation
 
 -------------------------------- */
 .cd-secondary-nav {
-  position: relative;
-  z-index: 3;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    position: relative;
+    z-index: 3;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
+
 .cd-secondary-nav ul {
-  /* mobile first - secondary navigation hidden by default, triggered by tap/click on .cd-secondary-nav-trigger*/
-  position: fixed;
-  width: 90%;
-  max-width: 400px;
-  right: 5%;
-  bottom: 20px;
-  border-radius: 0.25em;
-  background: rgba(3, 13, 24, 0.96);
-  visibility: hidden;
-  z-index: 1;
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-  -webkit-transform: scale(0);
-  -moz-transform: scale(0);
-  -ms-transform: scale(0);
-  -o-transform: scale(0);
-  transform: scale(0);
-  -webkit-transform-origin: 100% 100%;
-  -moz-transform-origin: 100% 100%;
-  -ms-transform-origin: 100% 100%;
-  -o-transform-origin: 100% 100%;
-  transform-origin: 100% 100%;
-  -webkit-transition: -webkit-transform 0.3s, visibility 0s 0.3s;
-  -moz-transition: -moz-transform 0.3s, visibility 0s 0.3s;
-  transition: transform 0.3s, visibility 0s 0.3s;
+    /* mobile first - secondary navigation hidden by default, triggered by tap/click on .cd-secondary-nav-trigger*/
+    position: fixed;
+    width: 90%;
+    max-width: 400px;
+    right: 5%;
+    bottom: 20px;
+    border-radius: 0.25em;
+    background: rgba(3, 13, 24, 0.96);
+    visibility: hidden;
+    z-index: 1;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-transform: scale(0);
+    -moz-transform: scale(0);
+    -ms-transform: scale(0);
+    -o-transform: scale(0);
+    transform: scale(0);
+    -webkit-transform-origin: 100% 100%;
+    -moz-transform-origin: 100% 100%;
+    -ms-transform-origin: 100% 100%;
+    -o-transform-origin: 100% 100%;
+    transform-origin: 100% 100%;
+    -webkit-transition: -webkit-transform 0.3s, visibility 0s 0.3s;
+    -moz-transition: -moz-transform 0.3s, visibility 0s 0.3s;
+    transition: transform 0.3s, visibility 0s 0.3s;
 }
+
 .cd-secondary-nav ul.is-visible {
-  visibility: visible;
-  -webkit-transform: scale(1);
-  -moz-transform: scale(1);
-  -ms-transform: scale(1);
-  -o-transform: scale(1);
-  transform: scale(1);
-  -webkit-transition: -webkit-transform 0.3s, visibility 0s 0s;
-  -moz-transition: -moz-transform 0.3s, visibility 0s 0s;
-  transition: transform 0.3s, visibility 0s 0s;
+    visibility: visible;
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+    transform: scale(1);
+    -webkit-transition: -webkit-transform 0.3s, visibility 0s 0s;
+    -moz-transition: -moz-transform 0.3s, visibility 0s 0s;
+    transition: transform 0.3s, visibility 0s 0s;
 }
+
 .cd-secondary-nav li a {
-  display: block;
-  padding: 1.6em;
-  border-bottom: 1px solid #092645;
-  color: #f0eee1;
+    display: block;
+    padding: 1.6em;
+    border-bottom: 1px solid #092645;
+    color: #f0eee1;
 }
+
 .cd-secondary-nav li:last-child a {
-  border-bottom: none;
+    border-bottom: none;
 }
+
 .cd-secondary-nav {
-  z-index: 1;
-  height: 100px;
-  background-color: rgba(3, 13, 24, 0.96);
-  -webkit-transition: height 0.3s;
-  -moz-transition: height 0.3s;
-  transition: height 0.3s;
+    z-index: 1;
+    height: 100px;
+    background-color: rgba(3, 13, 24, 0.96);
+    -webkit-transition: height 0.3s;
+    -moz-transition: height 0.3s;
+    transition: height 0.3s;
 }
+
 .cd-secondary-nav nav, .cd-secondary-nav ul, .cd-secondary-nav li, .cd-secondary-nav a {
-  height: 100%;
+    height: 100%;
 }
+
 .cd-secondary-nav ul {
-  /* reset navigation values */
-  position: static;
-  width: auto;
-  max-width: 100%;
-  visibility: visible;
-  -webkit-transform: scale(1);
-  -moz-transform: scale(1);
-  -ms-transform: scale(1);
-  -o-transform: scale(1);
-  transform: scale(1);
-  text-align: center;
-  background-color: transparent;
+    /* reset navigation values */
+    position: static;
+    width: auto;
+    max-width: 100%;
+    visibility: visible;
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+    transform: scale(1);
+    text-align: center;
+    background-color: transparent;
 }
+
 .cd-secondary-nav li {
-  display: inline-block;
-  margin-left: -4px;
+    display: inline-block;
+    margin-left: -4px;
 }
+
 .cd-secondary-nav li a {
-  position: relative;
-  text-align: center;
-  display: block;
-  padding: 58px 40px 0 40px;
-  border-bottom: none;
-  -webkit-transition: padding 0.2s;
-  -moz-transition: padding 0.2s;
-  transition: padding 0.2s;
+    position: relative;
+    text-align: center;
+    display: block;
+    padding: 58px 40px 0 40px;
+    border-bottom: none;
+    -webkit-transition: padding 0.2s;
+    -moz-transition: padding 0.2s;
+    transition: padding 0.2s;
 }
+
 .cd-secondary-nav li a b {
-  text-transform: uppercase;
-  font-size: 13px;
-  font-size: 0.8125rem;
-  font-weight: 700;
-  color: rgba(240, 238, 225, 0.3);
+    text-transform: uppercase;
+    font-size: 13px;
+    font-size: 0.8125rem;
+    font-weight: 700;
+    color: rgba(240, 238, 225, 0.3);
 }
+
 .cd-secondary-nav li a span {
-  position: absolute;
-  display: inline-block;
-  width: 40px;
-  height: 40px;
-  top: 18px;
-  left: 50%;
-  right: auto;
-  -webkit-transform: translateX(-50%);
-  -moz-transform: translateX(-50%);
-  -ms-transform: translateX(-50%);
-  -o-transform: translateX(-50%);
-  transform: translateX(-50%);
-  background-repeat: no-repeat;
-  background-image: url(../img/cd-nav-icons.svg);
-  -webkit-transition: opacity 0.2s;
-  -moz-transition: opacity 0.2s;
-  transition: opacity 0.2s;
+    position: absolute;
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    top: 18px;
+    left: 50%;
+    right: auto;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    transform: translateX(-50%);
+    background-repeat: no-repeat;
+    background-image: url(../img/cd-nav-icons.svg);
+    -webkit-transition: opacity 0.2s;
+    -moz-transition: opacity 0.2s;
+    transition: opacity 0.2s;
 }
+
 .cd-secondary-nav li a:hover b, .cd-secondary-nav li a.active b {
-  color: #f0eee1;
+    color: #f0eee1;
 }
+
 .cd-secondary-nav li:nth-child(1) a span {
-  background-position: 0 0;
+    background-position: 0 0;
 }
+
 .cd-secondary-nav li:nth-child(2) a span {
-  background-position: -40px 0;
+    background-position: -40px 0;
 }
+
 .cd-secondary-nav li:nth-child(3) a span {
-  background-position: -80px 0;
+    background-position: -80px 0;
 }
+
 .cd-secondary-nav li:nth-child(4) a span {
-  background-position: -120px 0;
+    background-position: -120px 0;
 }
+
 .cd-secondary-nav li:nth-child(5) a span {
-  background-position: -160px 0;
+    background-position: -160px 0;
 }
+
 .cd-secondary-nav.is-fixed {
-  /* on Firefox CSS transition/animation fails when parent element changes position attribute*/
-  /* so we defined to diffent classes: .is-fixed to change the position value and .is-animated to change childrens' attributes (padding and opacity)*/
-  position: fixed;
-  left: 0;
-  top: 0;
-  height: 70px;
-  width: 100%;
+    /* on Firefox CSS transition/animation fails when parent element changes position attribute*/
+    /* so we defined to diffent classes: .is-fixed to change the position value and .is-animated to change childrens' attributes (padding and opacity)*/
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 70px;
+    width: 100%;
 }
+
 .cd-secondary-nav.animate-children {
-  /* on Firefox CSS transition/animation fails when parent element changes position attribute*/
-  /* so we defined to diffent classes: .is-fixed to change the position value and .is-animated to change childrens' attributes (padding and opacity)*/
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+    /* on Firefox CSS transition/animation fails when parent element changes position attribute*/
+    /* so we defined to diffent classes: .is-fixed to change the position value and .is-animated to change childrens' attributes (padding and opacity)*/
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
 }
+
 .cd-secondary-nav.animate-children li a {
-  padding: 26px 30px 0 30px;
+    padding: 26px 30px 0 30px;
 }
+
 .cd-secondary-nav.animate-children li a span {
-  opacity: 0;
+    opacity: 0;
 }
 
 /* -------------------------------- 
@@ -429,47 +543,112 @@ Placeholder Sections
 
 -------------------------------- */
 section {
-  margin: 0 auto;
-  padding: 2em 0;
-}
-section h2 {
-  font-size: 20px;
-  font-size: 1.25rem;
-  margin-bottom: .6em;
-  font-weight: 700;
-}
-section p {
-  line-height: 1.6;
-}
-@media only screen and (min-width: 1170px) {
-  section {
     margin: 0 auto;
-    padding: 4em 0;
-  }
-  section h2 {
-    font-size: 30px;
-    font-size: 1.875rem;
-  }
-  section p {
-    font-size: 20px;
-    font-size: 1.25rem;
-  }
+    padding: 1em 0;
 }
+
+section h1 {
+    font-size: 2em;
+}
+
+section h2 {
+    font-size: 1.5em;
+}
+section h3 {
+    font-size: 1.3em;
+}
+
+section p {
+    line-height: 1.6;
+}
+
+@media only screen and (min-width: 1170px) {
+    section {
+        margin: 0 auto;
+        padding: 1em 0;
+    }
+
+    section h2 {
+        font-size: 30px;
+        font-size: 1.875rem;
+    }
+
+    section p {
+        font-size: 1em;
+    }
+
+    section a {
+        font-size: 1em;
+    }
+}
+
+/* HOME */
+.home {
+    min-height: 100vh !important;
+}
+
+.title {
+    font-family: SansitaOne, sans-serif;
+    color: #336600;
+}
+
+.title h1 {
+    font-size: 3em;
+}
+
+.col-xs-4, .col-sm-4, .col-md-4, .col-lg-4 {
+    padding-right: 0;
+}
+
+.legend {
+    width: 100%;
+    position: relative;
+}
+
+.legend h3 {
+    color: #fff;
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    margin-top:-40px;
+
+    background-color: rgba(0,0,0,0.5);
+    padding:9px;
+}
+.legend:hover {
+    cursor: pointer;
+}
+.legend:hover h3 {
+    background-color: #99cc33;
+}
+
+footer {
+    background-color: #000000;
+    color: #ffffff;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
 /* RESPONSIVE */
 @media only screen and (max-width: 1170px) {
-  .cd-primary-nav {
-    display:none;
-  }
+    .cd-primary-nav {
+        display: none;
+    }
 }
+
 /* MOBILE */
 @media only screen and (max-width: 768px) {
-  header {
-    position:fixed
-  }
-   .cd-primary-nav {
-    display:inherit;
-  }
+    header {
+        position: fixed
+    }
+
+    .cd-primary-nav {
+        display: inherit;
+    }
+
     .cd-secondary-nav {
-    display:none;
-  }
+        display: none;
+    }
 }

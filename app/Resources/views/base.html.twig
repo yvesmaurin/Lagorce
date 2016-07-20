@@ -8,6 +8,7 @@
     <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}"/>
 
     <link rel="stylesheet" href="{{ asset('css/reset.css') }}"> <!-- CSS reset -->
+    <link rel="stylesheet" href="{{ asset('css/flexboxgrid.min.css') }}">
     <link rel="stylesheet" href="{{ asset('css/style.css') }}"> <!-- Resource style -->
 
     <script src="{{ asset('js/jquery-2.1.1.js') }}"></script> <!-- Jquery -->
@@ -20,8 +21,8 @@
         <nav class="cd-primary-nav">
             <ul>
                 <li><a href="{{ path('maison') }}">Maison</a></li>
-                <li><a href="#0">Tour</a></li>
-                <li><a href="#0">Buy</a></li>
+                <li><a href="#0">Activités</a></li>
+                <li><a href="#0">Contact</a></li>
             </ul>
         </nav> <!-- cd-primary-nav -->
     </header>
@@ -36,8 +37,8 @@
             <ul>
                 <li><a href="{{ path('homepage') }}"><h1>Le lion d'or</h1></a></li>
                 <li><a href="{{ path('maison') }}">Maison</a></li>
-                <li><a href="#0">Tour</a></li>
-                <li><a href="#0">Buy</a></li>
+                <li><a href="#0">Activités</a></li>
+                <li><a href="#0">Contact</a></li>
             </ul>
         </nav>
     </div> <!-- .cd-secondary-nav -->
@@ -46,6 +47,25 @@
 <main class="cd-main-content">
     {% block body %}{% endblock %}
 </main>
+
+<footer>
+    <section class="cd-container">
+        <div class="row center-xs between-xs">
+            <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                <p>Copyright © 2016 liondor-lagorce.fr</p>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-3 col-lg-2">
+                <p><a href="">Mentions légales</a></p>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-3 col-lg-5">
+                <p>Lagorce - 06 13 16 14 78 - jpozil@orange.fr</p>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-3 col-lg-2">
+                <p><a href="">Notice d'utilisation</a></p>
+            </div>
+        </div>
+    </section>
+</footer>
 
 {% block javascripts %}{% endblock %}
 </body>
