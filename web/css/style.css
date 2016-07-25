@@ -44,9 +44,16 @@ img.responsive {
     height: auto;
 }
 
+.justify {
+    text-align: justify;
+}
+
+.fluid {
+    margin-bottom: 100px;
+}
+
 .button {
     margin-top:30px;
-    margin-bottom:30px;
     display: inline-block;
     -webkit-box-sizing: content-box;
     -moz-box-sizing: content-box;
@@ -76,7 +83,6 @@ img.responsive {
     cursor: pointer;
     top: 0;
     left: 0;
-    border: 0 solid #018dc4;
     color: rgba(0,0,0,0.9);
     -o-text-overflow: clip;
     text-overflow: clip;
@@ -89,7 +95,6 @@ img.responsive {
     background-clip: border-box;
     -webkit-background-size: 30px auto;
     background-size: 30px auto;
-    text-shadow: -1px -1px 0 rgba(15,73,168,0.66) ;
     -webkit-transition: all 300ms cubic-bezier(0.42, 0, 0.58, 1);
     -moz-transition: all 300ms cubic-bezier(0.42, 0, 0.58, 1);
     -o-transition: all 300ms cubic-bezier(0.42, 0, 0.58, 1);
@@ -117,7 +122,7 @@ Modules - reusable parts of our design
     /* this class is given - using jQuery - to the .cd-main-content following the .cd-secondary-nav when it becomes fixed */
 }
 
-@media only screen and (min-width: 1170px) {
+@media only screen and (min-width: 1171px) {
     .has-top-margin {
         -webkit-animation: animate-margin-top 0.3s;
         -moz-animation: animate-margin-top 0.3s;
@@ -168,11 +173,11 @@ header {
     width: 100%;
     height: 50px;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
-    background-color: #030d18;
+    background-color: #99cc33;
     z-index: 3;
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 769px) {
     header {
         height: 70px;
         background-color: transparent;
@@ -189,13 +194,18 @@ header {
     display: block;
 }
 
-@media only screen and (min-width: 768px) {
+#cd-logo h1 {
+    font-family: SansitaOne;
+    font-size: 1.8em;
+}
+
+@media only screen and (min-width: 769px) {
     #cd-logo {
         margin: 23px 0 0 5%;
     }
 }
 
-@media only screen and (min-width: 1170px) {
+@media only screen and (min-width: 1171px) {
     #cd-logo.is-hidden {
         /* assign a position fixed and move outside the viewport (on the left) */
         opacity: 0;
@@ -225,6 +235,10 @@ header {
     background-size: 44px 44px;
 }
 
+.cd-primary-nav:hover {
+    cursor: pointer;
+}
+
 .cd-primary-nav ul {
     position: fixed;
     top: 0;
@@ -250,9 +264,17 @@ header {
     height: 50px;
     line-height: 50px;
     padding-left: 5%;
-    background: #000101;
-    border-top: 1px solid #051426;
+    background: #336600;
+    border-top: 1px solid #fff;
     color: #f0eee1;
+}
+
+.cd-primary-nav a:hover {
+    background-color: #99cc33;
+}
+
+.cd-primary-nav li.active a {
+    background-color: #99cc33;
 }
 
 /* --------------------------------
@@ -263,7 +285,6 @@ Intro Top
 #cd-intro {
     position: relative;
     height: 300px;
-    background: url(../img/intro-background.jpg) no-repeat center center;
     background-size: cover;
     z-index: 2;
 }
@@ -280,11 +301,12 @@ Intro Top
     font-size: 24px;
     font-size: 1.5rem;
     font-weight: 300;
-    color: #030d18;
+    color: #fff;
     text-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    font-family: SansitaOne;
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 769px) {
     #cd-intro {
         height: 400px;
     }
@@ -299,7 +321,7 @@ Intro Top
     }
 }
 
-@media only screen and (min-width: 1170px) {
+@media only screen and (min-width: 1171px) {
     #cd-intro {
         height: 600px;
     }
@@ -326,7 +348,7 @@ Intro Top
     background-color: #f5484a;
 }
 
-@media only screen and (min-width: 1170px) {
+@media only screen and (min-width: 1171px) {
     header #cd-logo {
         display: none;
     }
@@ -365,6 +387,8 @@ Secondary Fixed Navigation
     z-index: 3;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+
+    margin-bottom: 50px;
 }
 
 .cd-secondary-nav ul {
@@ -375,7 +399,7 @@ Secondary Fixed Navigation
     right: 5%;
     bottom: 20px;
     border-radius: 0.25em;
-    background: rgba(3, 13, 24, 0.96);
+    background: #99cc33;
     visibility: hidden;
     z-index: 1;
     -webkit-backface-visibility: hidden;
@@ -411,7 +435,15 @@ Secondary Fixed Navigation
     display: block;
     padding: 1.6em;
     border-bottom: 1px solid #092645;
-    color: #f0eee1;
+    color: #fff;
+}
+
+.cd-secondary-nav li:hover a {
+    color: #336600;
+}
+
+.cd-secondary-nav li.active a {
+    color: #336600;
 }
 
 .cd-secondary-nav li:last-child a {
@@ -420,8 +452,8 @@ Secondary Fixed Navigation
 
 .cd-secondary-nav {
     z-index: 1;
-    height: 100px;
-    background-color: rgba(3, 13, 24, 0.96);
+    height: 70px;
+    background-color: #99cc33;
     -webkit-transition: height 0.3s;
     -moz-transition: height 0.3s;
     transition: height 0.3s;
@@ -449,17 +481,16 @@ Secondary Fixed Navigation
 .cd-secondary-nav li {
     display: inline-block;
     margin-left: -4px;
+    font-size: 1.5em;
+    line-height: 70px;
 }
 
 .cd-secondary-nav li a {
     position: relative;
     text-align: center;
     display: block;
-    padding: 58px 40px 0 40px;
+    padding: 0px 40px 0 40px;
     border-bottom: none;
-    -webkit-transition: padding 0.2s;
-    -moz-transition: padding 0.2s;
-    transition: padding 0.2s;
 }
 
 .cd-secondary-nav li a b {
@@ -468,26 +499,6 @@ Secondary Fixed Navigation
     font-size: 0.8125rem;
     font-weight: 700;
     color: rgba(240, 238, 225, 0.3);
-}
-
-.cd-secondary-nav li a span {
-    position: absolute;
-    display: inline-block;
-    width: 40px;
-    height: 40px;
-    top: 18px;
-    left: 50%;
-    right: auto;
-    -webkit-transform: translateX(-50%);
-    -moz-transform: translateX(-50%);
-    -ms-transform: translateX(-50%);
-    -o-transform: translateX(-50%);
-    transform: translateX(-50%);
-    background-repeat: no-repeat;
-    background-image: url(../img/cd-nav-icons.svg);
-    -webkit-transition: opacity 0.2s;
-    -moz-transition: opacity 0.2s;
-    transition: opacity 0.2s;
 }
 
 .cd-secondary-nav li a:hover b, .cd-secondary-nav li a.active b {
@@ -530,10 +541,6 @@ Secondary Fixed Navigation
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
 }
 
-.cd-secondary-nav.animate-children li a {
-    padding: 26px 30px 0 30px;
-}
-
 .cd-secondary-nav.animate-children li a span {
     opacity: 0;
 }
@@ -552,6 +559,10 @@ section h1 {
     font-size: 2em;
 }
 
+section h1.title {
+    margin-bottom: 50px;
+}
+
 section h2 {
     font-size: 1.5em;
 }
@@ -563,7 +574,7 @@ section p {
     line-height: 1.6;
 }
 
-@media only screen and (min-width: 1170px) {
+@media only screen and (min-width: 1171px) {
     section {
         margin: 0 auto;
         padding: 1em 0;
@@ -623,7 +634,13 @@ section p {
     background-color: #99cc33;
 }
 
+/* MAISON ET JARDIN */
+section#jardin {
+    padding-top: 100px;
+}
+
 footer {
+    margin-top: 50px;
     background-color: #000000;
     color: #ffffff;
 }
@@ -636,6 +653,19 @@ footer a:hover {
 @media only screen and (max-width: 1170px) {
     .cd-primary-nav {
         display: none;
+    }
+    .cd-secondary-nav ul li {
+        font-size: 1.2em;
+    }
+    .cd-secondary-nav li a {
+        padding-left:1em!important;
+        padding-right:1em!important;
+    }
+    .cd-container {
+        padding:0 5px;
+    }
+    p.justify {
+        padding-right: 15px;
     }
 }
 
@@ -651,5 +681,12 @@ footer a:hover {
 
     .cd-secondary-nav {
         display: none;
+    }
+
+    section#maison {
+        padding-top: 30px;
+    }
+    section#jardin {
+        padding-top: 60px;
     }
 }

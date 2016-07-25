@@ -3,17 +3,17 @@ jQuery(document).ready(function($){
 		secondaryNavTopPosition = secondaryNav.offset().top,
 		taglineOffesetTop = $('#cd-intro-tagline').offset().top + $('#cd-intro-tagline').height() + parseInt($('#cd-intro-tagline').css('paddingTop').replace('px', '')),
 		contentSections = $('.cd-section');
-	
+
 	$(window).on('scroll', function(){
 		//on desktop - assign a position fixed to logo and action button and move them outside the viewport
 		( $(window).scrollTop() > taglineOffesetTop ) ? $('#cd-logo, .cd-btn').addClass('is-hidden') : $('#cd-logo, .cd-btn').removeClass('is-hidden');
-		
+
 		//on desktop - fix secondary navigation on scrolling
-		if($(window).scrollTop() > secondaryNavTopPosition ) {
+		if($(window).scrollTop() >= secondaryNavTopPosition ) {
 			//fix secondary navigation
 			secondaryNav.addClass('is-fixed');
 			//push the .cd-main-content giving it a top-margin
-			$('.cd-main-content').addClass('has-top-margin');	
+			$('.cd-main-content').addClass('has-top-margin');
 			//on Firefox CSS transition/animation fails when parent element changes position attribute
 			//so we to change secondary navigation childrens attributes after having changed its position value
 			setTimeout(function() {

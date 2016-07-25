@@ -2,6 +2,8 @@
 
 {% block navigation %}{% endblock %}
 
+{% set active = "accueil" %}
+
 {% block body %}
     <div class="home">
 
@@ -13,7 +15,7 @@
         <section class="cd-container">
             <div class="row between-xs">
                 <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
-                    <a class="legend" href="">
+                    <a class="legend" href="{{ path('maison') }}#jardin">
                         <img class="responsive" src="{{ asset('img/home/jardin.png') }}" alt="jardin"/>
                         <h3>Jardin</h3>
                     </a>

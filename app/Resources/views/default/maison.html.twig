@@ -1,12 +1,100 @@
 {% extends 'base.html.twig' %}
 
+{% set title_image = "banniereMaison" %}
+{% set title = "Maison et Jardin" %}
+{% set active = "maison" %}
 
 {% block body %}
-    <section id="cd-placeholder-1" class="cd-container">
-        <h1>La maison et ses équipements</h1>
-        <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br
-         <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/>
-          <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/>
-          <br/>
-   	</section>
+    <section id="maison" class="cd-container">
+        <h1 class="title">La maison</h1>
+
+        <div class="row center-xs fluid">
+            <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8">
+                <img class="responsive" src="{{ asset('img/house/sejour.png') }}" alt="sejour" />
+            </div>
+            <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+                <h2 class="justify">Le séjour</h2>
+                <p class="justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse leo ipsum, cursus sed pulvinar eget, porttitor non odio. Aenean tincidunt, risus ac accumsan placerat, diam elit blandit augue, id iaculis risus tortor lacinia odio. Donec ligula elit, pharetra eu ultrices et, fermentum et massa. Vivamus dui urna, fringilla et ornare at, auctor et augue. Nunc efficitur dictum nunc, eu luctus ex ultrices eget. Quisque interdum est justo. Fusce elit nulla, fermentum a mauris lacinia, ultricies finibus est. Duis viverra, dolor eget gravida fermentum, eros ex sollicitudin quam, ut facilisis eros justo et augue. Integer id commodo diam. Proin nibh mi, pharetra a convallis eu, sollicitudin nec velit.
+                </p>
+            </div>
+        </div>
+
+        <div class="row center-xs fluid">
+            <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+                <h2 class="justify">La cuisine</h2>
+                <p class="justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse leo ipsum, cursus sed pulvinar eget, porttitor non odio. Aenean tincidunt, risus ac accumsan placerat, diam elit blandit augue, id iaculis risus tortor lacinia odio. Donec ligula elit, pharetra eu ultrices et, fermentum et massa. Vivamus dui urna, fringilla et ornare at, auctor et augue. Nunc efficitur dictum nunc, eu luctus ex ultrices eget. Quisque interdum est justo. Fusce elit nulla, fermentum a mauris lacinia, ultricies finibus est. Duis viverra, dolor eget gravida fermentum, eros ex sollicitudin quam, ut facilisis eros justo et augue. Integer id commodo diam. Proin nibh mi, pharetra a convallis eu, sollicitudin nec velit.
+                </p>
+            </div>
+            <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8">
+                <img class="responsive" src="{{ asset('img/house/cuisine.png') }}" alt="cuisine" />
+            </div>
+        </div>
+
+        <div class="row center-xs fluid">
+            <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8">
+                <img class="responsive" src="{{ asset('img/house/chambre.png') }}" alt="chambre" />
+            </div>
+            <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+                <h2 class="justify">Les chambres</h2>
+                <p class="justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse leo ipsum, cursus sed pulvinar eget, porttitor non odio. Aenean tincidunt, risus ac accumsan placerat, diam elit blandit augue, id iaculis risus tortor lacinia odio. Donec ligula elit, pharetra eu ultrices et, fermentum et massa. Vivamus dui urna, fringilla et ornare at, auctor et augue. Nunc efficitur dictum nunc, eu luctus ex ultrices eget. Quisque interdum est justo. Fusce elit nulla, fermentum a mauris lacinia, ultricies finibus est. Duis viverra, dolor eget gravida fermentum, eros ex sollicitudin quam, ut facilisis eros justo et augue. Integer id commodo diam. Proin nibh mi, pharetra a convallis eu, sollicitudin nec velit.
+                </p>
+            </div>
+        </div>
+
+        <div class="row center-xs">
+            <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+                <h2 class="justify">La salle de bain</h2>
+                <p class="justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse leo ipsum, cursus sed pulvinar eget, porttitor non odio. Aenean tincidunt, risus ac accumsan placerat, diam elit blandit augue, id iaculis risus tortor lacinia odio. Donec ligula elit, pharetra eu ultrices et, fermentum et massa. Vivamus dui urna, fringilla et ornare at, auctor et augue. Nunc efficitur dictum nunc, eu luctus ex ultrices eget. Quisque interdum est justo. Fusce elit nulla, fermentum a mauris lacinia, ultricies finibus est. Duis viverra, dolor eget gravida fermentum, eros ex sollicitudin quam, ut facilisis eros justo et augue. Integer id commodo diam. Proin nibh mi, pharetra a convallis eu, sollicitudin nec velit.
+                </p>
+            </div>
+            <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8">
+                <img class="responsive" src="{{ asset('img/house/SdB.png') }}" alt="salle de bain" />
+            </div>
+        </div>
+
+    </section>
+
+    <section id="jardin" class="cd-container">
+        <h1 class="title">Le jardin</h1>
+
+        <div class="row center-xs fluid">
+            <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8">
+                <img class="responsive" src="{{ asset('img/house/passerelle.png') }}" alt="passerelle" />
+            </div>
+            <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+                <p class="justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse leo ipsum, cursus sed pulvinar eget, porttitor non odio. Aenean tincidunt, risus ac accumsan placerat, diam elit blandit augue, id iaculis risus tortor lacinia odio. Donec ligula elit, pharetra eu ultrices et, fermentum et massa. Vivamus dui urna, fringilla et ornare at, auctor et augue. Nunc efficitur dictum nunc, eu luctus ex ultrices eget. Quisque interdum est justo. Fusce elit nulla, fermentum a mauris lacinia, ultricies finibus est. Duis viverra, dolor eget gravida fermentum, eros ex sollicitudin quam, ut facilisis eros justo et augue. Integer id commodo diam. Proin nibh mi, pharetra a convallis eu, sollicitudin nec velit.
+                </p>
+            </div>
+        </div>
+
+        <div class="row center-xs fluid">
+            <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+                <p class="justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse leo ipsum, cursus sed pulvinar eget, porttitor non odio. Aenean tincidunt, risus ac accumsan placerat, diam elit blandit augue, id iaculis risus tortor lacinia odio. Donec ligula elit, pharetra eu ultrices et, fermentum et massa. Vivamus dui urna, fringilla et ornare at, auctor et augue. Nunc efficitur dictum nunc, eu luctus ex ultrices eget. Quisque interdum est justo. Fusce elit nulla, fermentum a mauris lacinia, ultricies finibus est. Duis viverra, dolor eget gravida fermentum, eros ex sollicitudin quam, ut facilisis eros justo et augue. Integer id commodo diam. Proin nibh mi, pharetra a convallis eu, sollicitudin nec velit.
+                </p>
+            </div>
+            <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8">
+                <img class="responsive" src="{{ asset('img/house/jardin1.png') }}" alt="jardin" />
+            </div>
+        </div>
+
+        <div class="row center-xs fluid">
+            <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8">
+                <img class="responsive" src="{{ asset('img/house/jardin2.png') }}" alt="jardin" />
+            </div>
+            <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+                <p class="justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse leo ipsum, cursus sed pulvinar eget, porttitor non odio. Aenean tincidunt, risus ac accumsan placerat, diam elit blandit augue, id iaculis risus tortor lacinia odio. Donec ligula elit, pharetra eu ultrices et, fermentum et massa. Vivamus dui urna, fringilla et ornare at, auctor et augue. Nunc efficitur dictum nunc, eu luctus ex ultrices eget. Quisque interdum est justo. Fusce elit nulla, fermentum a mauris lacinia, ultricies finibus est. Duis viverra, dolor eget gravida fermentum, eros ex sollicitudin quam, ut facilisis eros justo et augue. Integer id commodo diam. Proin nibh mi, pharetra a convallis eu, sollicitudin nec velit.
+                </p>
+            </div>
+        </div>
+
+        <div class="row center-xs">
+            <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+                <p class="justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse leo ipsum, cursus sed pulvinar eget, porttitor non odio. Aenean tincidunt, risus ac accumsan placerat, diam elit blandit augue, id iaculis risus tortor lacinia odio. Donec ligula elit, pharetra eu ultrices et, fermentum et massa. Vivamus dui urna, fringilla et ornare at, auctor et augue. Nunc efficitur dictum nunc, eu luctus ex ultrices eget. Quisque interdum est justo. Fusce elit nulla, fermentum a mauris lacinia, ultricies finibus est. Duis viverra, dolor eget gravida fermentum, eros ex sollicitudin quam, ut facilisis eros justo et augue. Integer id commodo diam. Proin nibh mi, pharetra a convallis eu, sollicitudin nec velit.
+                </p>
+            </div>
+            <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8">
+                <img class="responsive" src="{{ asset('img/house/jardin3.png') }}" alt="jardin" />
+            </div>
+        </div>
+    </section>
 {% endblock %}
