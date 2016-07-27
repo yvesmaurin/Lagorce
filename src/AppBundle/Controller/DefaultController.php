@@ -48,4 +48,13 @@ class DefaultController extends Controller
         // replace this example code with whatever you need
         return $this->render('default/contact.html.twig');
     }
+
+    /**
+     * @Route("/notice", name="notice")
+     */
+    public function noticeAction(Request $request)
+    {
+        // replace this example code with whatever you need
+        return $this->render('default/notice.html.twig');
+    }
 }

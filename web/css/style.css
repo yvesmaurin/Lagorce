@@ -308,8 +308,7 @@ Intro Top
 }
 
 #cd-intro h1 {
-    font-size: 24px;
-    font-size: 1.5rem;
+    font-size: 3rem;
     font-weight: 300;
     color: #fff;
     text-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
@@ -326,8 +325,7 @@ Intro Top
     }
 
     #cd-intro h1 {
-        font-size: 32px;
-        font-size: 2rem;
+        font-size: 3rem;
     }
 }
 
@@ -699,6 +697,13 @@ section#jardin {
 #mapidContact {
     height: 60vh;
     z-index:0;
+}
+section ul li {
+    line-height: 2em;
+}
+section h2 {
+    margin-bottom: 10px;
+    margin-top: 10px;
 }
 
 footer {

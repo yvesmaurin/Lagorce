@@ -1,17 +1,36 @@
 {% extends 'base.html.twig' %}
 
-{% set title_image = "banniereActivités.jpg" %}
+{% set title_image = "banniereContact.jpg" %}
 {% set title = "Contact" %}
 {% set active = "contact" %}
 
 {% block body %}
     <section id="contact" class="cd-container">
+        <div class="row fluid">
+            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                <h2>Nos coordonnées</h2>
+                <ul>
+                    <li><b>Téléphone :</b> 06 13 16 14 78 ou bien 01 47 09 07 11</li>
+                    <li><b>Courriel :</b> jean-pierre.ozil@liondor-lagorce.fr</li>
+                </ul>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                <h2>Situation</h2>
+                <ul>
+                    <li><b>D1, 07150 Lagorce, France</b> (coordonnées GPS : 44.44674, 4.41779)</li>
+                    <li>Au centre du village, en face de la mairie</li>
+                    <li>Commerces dans le village à moins de 100m</li>
+                    <li>Le torrent de l'Ibie est à 5km</li>
+                    <li>La gare routière est à 5km</li>
+                </ul>
+            </div>
+        </div>
         <div class="row center-xs">
             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+
                 <div id="mapidContact"></div>
             </div>
         </div>
-
     </section>
 {% endblock %}
 
