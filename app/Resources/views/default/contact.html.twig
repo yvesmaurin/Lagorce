@@ -1,0 +1,21 @@
+{% extends 'base.html.twig' %}
+
+{% set title_image = "banniereActivités.jpg" %}
+{% set title = "Contact" %}
+{% set active = "contact" %}
+
+{% block body %}
+    <section id="contact" class="cd-container">
+        <div class="row center-xs">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <div id="mapidContact"></div>
+            </div>
+        </div>
+
+    </section>
+{% endblock %}
+
+{% block javascripts %}
+    <script src="{{ asset('js/leaflet.js') }}"></script>
+    <script src="{{ asset('js/leaflet.contact.option.js') }}"></script>
+{% endblock %}

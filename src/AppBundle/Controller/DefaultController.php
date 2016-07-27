@@ -30,4 +30,22 @@ class DefaultController extends Controller
         // replace this example code with whatever you need
         return $this->render('default/maison.html.twig');
     }
+
+    /**
+     * @Route("/activités", name="activités")
+     */
+    public function activitésAction(Request $request)
+    {
+        // replace this example code with whatever you need
+        return $this->render('default/activités.html.twig');
+    }
+
+    /**
+     * @Route("/contact", name="contact")
+     */
+    public function contactAction(Request $request)
+    {
+        // replace this example code with whatever you need
+        return $this->render('default/contact.html.twig');
+    }
 }

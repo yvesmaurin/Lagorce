@@ -25,7 +25,10 @@
     <meta name="theme-color" content="#ffffff">
 
     <link rel="stylesheet" href="{{ asset('css/reset.css') }}"> <!-- CSS reset -->
-    <link rel="stylesheet" href="{{ asset('css/flexboxgrid.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/photoswipe.css') }}"> <!-- Photoswipe -->
+    <link rel="stylesheet" href="{{ asset('css/default-skin/default-skin.css') }}"> <!-- Skin Photoswipe -->
+    <link rel="stylesheet" href="{{ asset('css/leaflet.css') }}"> <!-- Map Leaflet -->
+    <link rel="stylesheet" href="{{ asset('css/flexboxgrid.min.css') }}"> <!-- grid flexbox -->
     <link rel="stylesheet" href="{{ asset('css/style.css') }}"> <!-- Resource style -->
 
     <script src="{{ asset('js/jquery-2.1.1.js') }}"></script> <!-- Jquery -->
@@ -40,13 +43,12 @@
                 <li{% if active == "accueil" %} class="active"{% endif %}><a href="{{ path('homepage') }}">Accueil</a></li>
                 <li{% if active == "maison" %} class="active"{% endif %}><a href="{{ path('maison') }}">La maison</a></li>
                 <li{% if active == "jardin" %} class="active"{% endif %}><a href="{{ path('maison') }}#jardin">Le jardin</a></li>
-                <li{% if active == "tourisme" %} class="active"{% endif %}><a href="#0">Corpore sano</a></li>
-                <li{% if active == "culture" %} class="active"{% endif %}><a href="#0">Mens sana</a></li>
-                <li{% if active == "contact" %} class="active"{% endif %}><a href="#0">Contact</a></li>
+                <li{% if active == "tourisme" %} class="active"{% endif %}><a href="{{ path('activités') }}">Activités</a></li>
+                <li{% if active == "contact" %} class="active"{% endif %}><a href="{{ path('contact') }}">Contact</a></li>
             </ul>
         </nav> <!-- cd-primary-nav -->
     </header>
-    <section id="cd-intro" style="background: url(../img/banner/{{ title_image }}.png) no-repeat center center;">
+    <section id="cd-intro" style="background: url(../img/banner/{{ title_image }}) no-repeat center center;">
         <div id="cd-intro-tagline">
             <h1>{{ title }}</h1>
         </div> <!-- #cd-intro-tagline -->
@@ -58,9 +60,8 @@
                 <li{% if active == "accueil" %} class="active"{% endif %}><a href="{{ path('homepage') }}">Accueil</a></li>
                 <li{% if active == "maison" %} class="active"{% endif %}><a href="{{ path('maison') }}">La maison</a></li>
                 <li{% if active == "jardin" %} class="active"{% endif %}><a href="{{ path('maison') }}#jardin">Le jardin</a></li>
-                <li{% if active == "tourisme" %} class="active"{% endif %}><a href="#0">Corpore sano</a></li>
-                <li{% if active == "culture" %} class="active"{% endif %}><a href="#0">Mens sana</a></li>
-                <li{% if active == "contact" %} class="active"{% endif %}><a href="#0">Contact</a></li>
+                <li{% if active == "tourisme" %} class="active"{% endif %}><a href="{{ path('activités') }}">Activités</a></li>
+                <li{% if active == "contact" %} class="active"{% endif %}><a href="{{ path('contact') }}">Contact</a></li>
             </ul>
         </nav>
     </div> <!-- .cd-secondary-nav -->

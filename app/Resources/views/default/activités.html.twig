@@ -1,0 +1,210 @@
+{% extends 'base.html.twig' %}
+
+{% set title_image = "banniereActivités.jpg" %}
+{% set title = "Les activités à proximité" %}
+{% set active = "tourisme" %}
+
+{% block body %}
+    <section id="activite" class="cd-container">
+        <h1 class="title">Les activités</h1>
+
+        <div class="row center-xs fluid">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <div id="mapid"></div>
+            </div>
+        </div>
+
+        <div class="row markup-legend">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <p><i>Cliquez sur les liens en vert pour voir leur position sur la carte.</i></p>
+                <h2>Le lion d'or</h2>
+                <h3><a href="{{ path('activités') }}#mapid" onclick="goToMarkup(1);">Maison de vacances</a></h3>
+                <p>D1, 07150 Lagorce, France. En face de la mairie.</p>
+
+                <h2>Randonnées pédestres</h2>
+                <h3><a href="{{ path('activités') }}#mapid" onclick="goToMarkup(2);">Pradons – les Bouchets – Serre
+                        Juillet</a></h3>
+                <p>Circuit balisé de 10 km (environ 3h 30) sans grande difficulté dans les collines à l’ouest de
+                    Lagorce.
+                    Cartes IGN 2938O et 2939OT.<a
+                            href="http://www.visorando.com/randonnee-pradons-les-bouchets-serre-juillet/"
+                            target="_blank"> Cliquez ici</a>
+                    pour l’itinéraire. Il est possible de parcourir le circuit à partir des Bouchets (Lat. 44.451514,
+                    Long.
+                    4.382353999999964) que l’on rejoindra depuis Lagorce (5km) en empruntant la D1 vers le Nord puis la
+                    D559
+                    vers l’Ouest.</p>
+
+                <h3><a href="{{ path('activités') }}#mapid" onclick="goToMarkup(3);">Gour de la Sompe – Pertus de
+                        Fabria</a></h3>
+                <p>Circuit non balisé de 9 km (environ 3h) dans le bois d’Ajude autour de Lagorce. Cartes IGN 2938O et
+                    2939OT. Départ du parking (Lat. 44.47050222639855, Long. 4.417082449645932) sur la D1 au Nord de
+                    Lagorce. <a
+                            href="http://www.visorando.com/randonnee-gour-de-la-sompe-pertus-de-fabria/"
+                            target="_blank"> Cliquez ici</a> pour
+                    l’itinéraire détaillé.</p>
+
+                <h3><a href="{{ path('activités') }}#mapid" onclick="goToMarkup(4);">La dent de Rez</a></h3>
+                <p>
+                    Magnifique vue à 360° depuis le sommet, à 720 m d’altitude. Accès facile depuis le village de Gras
+                    (Lat. 44.442949029984355, Long. 4.5415667939453215), sur la D362, à quelques kilomètres de Lagorce
+                    en passant par Vallon Pont d’Arc. Carte IGN 2939OT. Promenade facile balisée depuis le hameau des
+                    Reynouard, au Gras.
+                </p>
+
+                <p>
+                    Signalons plusieurs sentiers qui passent aux Vans (Lat. 44.40518918716356, Long. 4.13335603955079),
+                    village à l’ouest de Lagorce : les GR4 et GR44, le GRP « Le cévenol » et la « route des
+                    Dragonnades » (circuit balisé de 4 étapes) qui fut construite par Louis XIV pour réprimer la
+                    population protestante. Pour plus de détails, <a
+                            href="http://www.parc-monts-ardeche.fr/decouvrir-les-monts-d-ardeche/randonnees-dans-le-parc/itinerance.html?view=zendapp<"
+                            target="_blank">voir le site du parc des monts d’Ardèche</a>.
+                </p>
+
+                <h2>VTT</h2>
+
+                <h3><a href="{{ path('activités') }}#mapid" onclick="goToMarkup(5);">Traversée des monts d’Ardèche</a>
+                </h3>
+                <p>Itinéraire de 150 km depuis Vans (au Sud) jusqu’à Ste-Agrève (au Nord) empruntant notamment les GR7
+                    et GR4.</p>
+
+                <h3><a href="{{ path('activités') }}#mapid" onclick="goToMarkup(6);">Circuit famille patrimoine</a></h3>
+                <p>À Lablachère (Lat. 44.4631029, Long. 4.214155000000005, 26km de Lagorce), parcours pittoresque à
+                    faible dénivelé, accessible à la famille au complet. À voir, un pont mégalithique à proximité du
+                    hameau de la croisette.</p>
+
+                <p>Il existe un topo-VTT en Ardèche-Sud décrivant 52 itinéraires dans la montagne ardéchoise, les gorges
+                    de l’Ardèche, la haute Cévenne, le bas Vivarais… Aux éditions VTOPO, par G. Brun, 160p. 20€.</p>
+
+                <p>Enfin, on trouvera sur le site <a href="http://www.yadugaz07.com/vtt-ardeche-drome.php"
+                                                     target="_blank">yadugaz07</a>, une liste de 156
+                    circuits ardéchois, dont de beaux circuits dans la région des Vans et de Berrias Casteljau.</p>
+
+                <h2>Escalade</h2>
+                <h3><a href="{{ path('activités') }}#mapid" onclick="goToMarkup(7);">Vallée du Chassezac</a></h3>
+                <p>De très nombreux sites dans la vallée du Chassezac, à proximité des Vans Des dizaines de voies à
+                    Berrias et Casteljau (Lat. 44.39685212815012, Long. 4.198187952392573, à environ 20km de Lagorce) et
+                    au Mazet (<a href="http://www.yadugaz07.com/berrias-casteljau-escalade.php" target="_blank">plus
+                        d'informations</a>). Voir pour la vallée du Chassezac
+                    dans son ensemble, on consultera avec profit le plan accessible ici :
+                    <a href="http://www.wobook.com/WB_k8Ws1dw6h/planescaladeweb.html"
+                       target="_blank">plan escalade</a>.</p>
+
+                <h3><a href="{{ path('activités') }}#mapid" onclick="goToMarkup(8);">Tras les Baumes au Chambon</a></h3>
+                <p>Mention pour le site de Tras les Baumes au Chambon (Lat. 44.62041379676684, Long. 4.225042089721683)
+                    qui propose un parcours découverte, idéal pour les débutants.</p>
+
+                <p>Signalons qu’il existe un topo-guide des sites d’escalade en Ardèche disponible dans tous les offices
+                    de tourisme et chez les commerçants à proximité des sites (une trentaine d’euros).</p>
+
+                <h2>Canyoning</h2>
+                <h3><a href="{{ path('activités') }}#mapid" onclick="goToMarkup(9);">La Denave</a></h3>
+                <p>Pour l’accès aux multiples canyons, on visitera avec profit le site
+                    <a href="http://www.yadugaz07.com/canyon-ardeche-lozere-drome.php" target="_blank">yadugaz07</a>. Il
+                    en existe plusieurs dans le Chassezac.
+                    Citons La Denave (Lat. 44.595967017929944, Long. 4.112498374916072) à Valgorge (45 km de Lagorce) et
+                    l’Ourlette (Lat. 44.55483619585021, Long. 3.9695421005249045) à Laval d’Aurelle (66km). Les canyons
+                    proches de Lagorce sont Pissevieille (Lat. 44.384541284897196, Long. 4.448036170684873, une
+                    quinzaine de kilomètres par Vallon Pont d’Arc) et Le Rimouren (Lat. 44.41229, Long.
+                    4.555520999999999, 25 km)</p>
+
+                <h2>Canoë – Kayak</h2>
+                <h3><a href="{{ path('activités') }}#mapid" onclick="goToMarkup(10);">Vallon Pont d'Arc</a></h3>
+                <p>La célébrissime descente de l’Ardèche à partir de Vallon Pont d’Arc.</p>
+
+                <h2>Spéléologie</h2>
+                <h3><a href="{{ path('activités') }}#mapid" onclick="goToMarkup(11);">Ceven’Aventure</a></h3>
+                <p>Voir les structures spécialisées comme <a href="http://www.ceven-aventure.com/" target="_blank">Ceven’Aventure</a>,
+                    aux Vans.</p>
+
+                <div id="culturelles">
+                    <h2>Tourisme Culturel</h2>
+
+                    <p>Hormis Aubenas, capitale historique, l’Ardèche propose de nombreuses cités de caractère :</p>
+
+                    <h3><a href="{{ path('activités') }}#mapid" onclick="goToMarkup(12);">Vogüe</a></h3>
+                    <p>(Lat. 44.551115, Long. 4.413293000000067), 13 km au nord de Lagorce, sur la route d’Aubenas
+                        (10 km plus au nord), un des 5 plus beaux villages de France, selon une émission télévisée
+                        récente.</p>
+
+                    <h3><a href="{{ path('activités') }}#mapid" onclick="goToMarkup(13);">Entraygues-sur-Volane</a></h3>
+                    <p>(Lat. 44.71813508454973, Long. 4.357954473541213) où ont vécu Jean Ferrat et Christine
+                        Sèvres.</p>
+
+                    <h3><a href="{{ path('activités') }}#mapid" onclick="goToMarkup(14);">Balazuc</a></h3>
+                    <p>(Lat. 44.509106, Long. 4.372706999999991), superbe village médiéval perché sur une falaise
+                        domainant l’Ardèche, à une quinzaine de kilomètres au nord de Lagorce.</p>
+
+                    <h3><a href="{{ path('activités') }}#mapid" onclick="goToMarkup(15);">Alba la Romaine</a></h3>
+                    <p>(Lat. 44.554554, Long. 4.597827999999936), à une trentaine de kilomètres au nord-est de Lagorce.
+                        À voir aussi le musée et le site archéologique.</p>
+
+                    <p>Mais aussi Banne, Naves (au sud des Vans), Labeaume (à l’est de Lagorce) ; Chassiers, Vinezac,
+                        Saint-Etienne-de-Fontbellon (au nord de Lagorce), Saint-Montan (à l’est), etc…</p>
+
+                    <p>À voir aussi :</p>
+
+                    <h3><a href="{{ path('activités') }}#mapid" onclick="goToMarkup(16);">La Magnanerie de Lagorce</a>
+                    </h3>
+                    <p>Musée du ver à soie dans le village.</p>
+
+                    <h3><a href="{{ path('activités') }}#mapid" onclick="goToMarkup(17);">Le musée de la
+                            châtaigneraie</a></h3>
+                    <p>Situé à Joyeuse (Lat. 44.47935900000001, Long. 4.239937050262483). S’il
+                        est un emblème de l’ardèche, c’est bien la châtaigne ! </p>
+
+                    <h3><a href="{{ path('activités') }}#mapid" onclick="goToMarkup(18);">La caverne du Pont d’Arc</a>
+                    </h3>
+                    <p>Reconstruction à l’identique de la célèbre grotte Chauvet et de ses peintures rupestres (-35000
+                        ans). Une dizaine de kilomètres au sud de Lagorce (Lat. 44.408298445070585, Long.
+                        4.42985725835797,
+                        <a href="http://www.aubenas-vals.com/decouvrir/les-incontournables/la-grotte-chauvet-grotte-chauvet-pont-darc/"
+                           target="_blank">plus d'informations</a>).</p>
+
+                    <h3><a href="{{ path('activités') }}#mapid" onclick="goToMarkup(19);">L’aven d’Orgnac</a></h3>
+                    <p>(Lat. 44.318491, Long. 4.412569 ; <a href="http://www.orgnac.com/"
+                                                            target="_blank">www.orgnac.com</a>),
+                        à 21 km de Lagorce. Une journée dans la préhistoire.</p>
+
+                    <h3><a href="{{ path('activités') }}#mapid" onclick="goToMarkup(20);">Ardelaine</a></h3>
+                    <p>Située à Saint Pierreville (Lat. 44.81408980342208, Long. 4.485005095214774, à 59 km
+                        au nord de Lagorce) la SCOP organisée autour de la filière laine, rendue célèbre par plusieurs
+                        reportages télévisés, propose un musée, des ateliers participatifs et un restaurant.</p>
+
+                    <h3><a href="{{ path('activités') }}#mapid" onclick="goToMarkup(21);">Mont Gerbier de Jonc</a></h3>
+                    <p>Plus loin, le Mont Gerbier de Jonc (Lat. 44.844444, Long. 4.220000000000027), célèbre volcan au
+                        pied duquel la Loire prend sa source (67 km au nord de Lagorce).</p>
+
+                    <h3><a href="{{ path('activités') }}#mapid" onclick="goToMarkup(22);">Vals les bains</a></h3>
+                    <p>À Vals les bains (Lat. 44.66515, Long. 4.364869999999996, à 29 km au nord de Lagorce), un geyser
+                        naturel envoie toutes les 6 heures (en été 5:30, 11:30, 17:30 et 23:30) une colonne d’eau qui
+                        peut atteindre 15m !</p>
+
+                    <h3><a href="{{ path('activités') }}#mapid" onclick="goToMarkup(23);">Vélorail des gorges du
+                            Doux</a></h3>
+                    <p>Plus loin, mais très tentant tout de même, le vélorail des gorges du Doux, à Boucieu-le-Roi (Lat.
+                        45.036708, Long. 4.682415999999989, à 133 km au nord de Lagorce). Deux circuits d’une douzaine
+                        de kilomètres, sur des cyclo-draisines pour 4 personnes. On pédale à l’aller en descente et on
+                        revient grâce à une motrice diesel historique au retour. La ligne emprunte la ligne historique
+                        du chemin de fer du Vivarais taillée à flanc de montagne à la fin du 19ème siècle. Balade
+                        familiale.</p>
+
+                    <p>Si on ne se sent pas de pédaler (même aisément) on peut aller directement à Saint-Jean-de-Muzols
+                        prendre le train de l’Ardèche (Lat. 45.06787461656886, Long. 4.7882070527343785) qui parcourt
+                        lui aussi les gorges (mais à la montée).</p>
+
+                    <h3><a href="{{ path('activités') }}#mapid" onclick="goToMarkup(24);">Musée de la résistance et de la déportation en Ardèche</a></h3>
+                    <p>Citons enfin ce musée, au Teil (Lat. 44.55061,
+                        Long. 4.683794000000034, à 41 km de Lagorce). Voir la programmation du musée sur le site :
+                        <a href="www.ardeche-resistance-deportation.fr" target="_blank">www.ardeche-resistance-deportation.fr</a>.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}
+
+{% block javascripts %}
+    <script src="{{ asset('js/leaflet.js') }}"></script>
+    <script src="{{ asset('js/leaflet.option.js') }}"></script>
+{% endblock %}
