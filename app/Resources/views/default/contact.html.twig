@@ -7,6 +7,12 @@
 {% block body %}
     <section id="contact" class="cd-container">
         <div class="row fluid">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                {% for message in app.session.flashbag.get('message') %}
+                    <p>{{ message }}</p>
+                {% endfor %}
+            </div>
+
             <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
                 <h2>Nos coordonnées</h2>
                 <ul>
@@ -35,6 +41,26 @@
             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 
                 <div id="mapidContact"></div>
+            </div>
+        </div>
+    </section>
+    <section id="commentaires" class="cd-container">
+        <div class="row fluid">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <h1>Vos avis sur la maison</h1>
+
+                {% for guestBook in guestBooks %}
+                    <p>{{ guestBook.nom }}</p>
+                    <p>{{ guestBook.date|localizeddate('medium', 'none') }}</p>
+                    <p>{{ guestBook.commentaire }}</p>
+                    <hr/>
+                {% endfor %}
+
+                <form name='form_commentaire' method="post" action="{{ path('contact_add') }}">
+                    <input name="nom" type="text" required="true"/>
+                    <textarea name="commentaire" required="true"></textarea>
+                    <input type="submit">
+                </form>
             </div>
         </div>
     </section>
