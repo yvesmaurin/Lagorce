@@ -50,15 +50,16 @@
                 <h1>Vos avis sur la maison</h1>
 
                 {% for guestBook in guestBooks %}
-                    <p>{{ guestBook.nom }}</p>
-                    <p>{{ guestBook.date|localizeddate('medium', 'none') }}</p>
+                    <p><b>{{ guestBook.nom }}</b>
+                    <br/>
+                    {{ guestBook.date|localizeddate('medium', 'none') }}</p>
                     <p>{{ guestBook.commentaire }}</p>
                     <hr/>
                 {% endfor %}
 
                 <form name='form_commentaire' method="post" action="{{ path('contact_add') }}">
-                    <input name="nom" type="text" required="true"/>
-                    <textarea name="commentaire" required="true"></textarea>
+                    <input id="nom" name="nom" type="text" required="true" placeholder="Nom"/>
+                    <textarea name="commentaire" required="true" placeholder="Commentaire"></textarea>
                     <input type="submit">
                 </form>
             </div>

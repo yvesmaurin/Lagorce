@@ -78,12 +78,14 @@ class DefaultController extends Controller
             $em->persist($guestBook);
             $em->flush();
 
-            $sujet= 'Un nouveau commentaire à propos du site';
+            $sujet = 'Un nouveau commentaire à propos du site';
             $message = 'De ' . $request->get('nom') . ' :\n' . $request->get('commentaire');
-            $message .= "\n La validation se fera sur la page d'administration du site.";
+            $message .= '\n La validation se fera sur la page d\'administration du site.';
             $destinataire = "vi.berniere@gmail.com";
             $headers = "From: <jean-pierre.ozil@liondor-lagorce.fr>\n";
-            $headers .= "Content-Type : text/plain; charset = 'utf-8'";
+            $headers .= "Reply-To: jean-pierre.ozil@liondor-lagorce.fr\n";
+            $headers .= "MIME-Version: 1.0\r\n";
+            $headers .= "Content-Type: text/plain; charset=\"iso-8859-1\"";
 
             if (mail($destinataire, $sujet, $message, $headers)) {
                 $this->addFlash('message', 'Votre commentaire a bien été envoyé');
