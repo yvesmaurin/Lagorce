@@ -79,7 +79,7 @@ input[type="submit"] {
     box-sizing: content-box;
     position: relative;
     cursor: pointer;
-    padding: 5px 40px;
+    padding: 2px 40px;
     border: none;
     line-height: 3em;
     background: #99cc33;
@@ -747,6 +747,7 @@ section#jardin {
 #mapidContact {
     height: 60vh;
     z-index:0;
+    margin-bottom:30px;
 }
 section ul li {
     line-height: 2em;
@@ -755,7 +756,18 @@ section h2 {
     margin-bottom: 10px;
     margin-top: 10px;
 }
+.pagination-buttons {
+    margin-top:30px;
+    margin-bottom: 50px;
+    text-align: center;
+}
+.pagination-buttons a {
+    padding: 10px;
+    border-radius: 4px;
+    background-color: #99cc33;
+}
 
+/* FOOTER */
 footer {
     margin-top: 50px;
     background-color: #000000;

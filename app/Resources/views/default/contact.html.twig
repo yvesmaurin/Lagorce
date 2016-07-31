@@ -52,15 +52,17 @@
                 {% for guestBook in guestBooks %}
                     <p><b>{{ guestBook.nom }}</b>
                     <br/>
-                    {{ guestBook.date|localizeddate('medium', 'none') }}</p>
+                    {{ guestBook.date|localizeddate('none', 'none', null, null, 'd MMMM Y') }}</p>
                     <p>{{ guestBook.commentaire }}</p>
                     <hr/>
                 {% endfor %}
 
+                {% include 'pagination.html.twig' %}
+
                 <form name='form_commentaire' method="post" action="{{ path('contact_add') }}">
                     <input id="nom" name="nom" type="text" required="true" placeholder="Nom"/>
                     <textarea name="commentaire" required="true" placeholder="Commentaire"></textarea>
-                    <input type="submit">
+                    <input type="submit" value="Soumettre" />
                 </form>
             </div>
         </div>
