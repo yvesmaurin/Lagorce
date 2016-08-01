@@ -12,7 +12,7 @@ use Doctrine\ORM\Tools\Pagination\Paginator;
 class GuestBookRepository extends \Doctrine\ORM\EntityRepository
 {
     /**
-     * Get the paginated list of published articles
+     * Get the paginated list of published guestBooks
      *
      * @param int $page
      * @param int $maxperpage
@@ -20,6 +20,27 @@ class GuestBookRepository extends \Doctrine\ORM\EntityRepository
      * @return Paginator
      */
     public function getList($page=1, $maxperpage=5)
+    {
+        $q = $this->_em->createQueryBuilder()
+            ->select('guestBook')
+            ->from('AppBundle:GuestBook','guestBook')
+        ;
+
+        $q->setFirstResult(($page-1) * $maxperpage)
+            ->setMaxResults($maxperpage);
+
+        return new Paginator($q);
+    }
+
+    /**
+     * Get the paginated list of published guestBooks
+     *
+     * @param int $page
+     * @param int $maxperpage
+     * @param string $sortby
+     * @return Paginator
+     */
+    public function getAdminList($page=1, $maxperpage=10)
     {
         $q = $this->_em->createQueryBuilder()
             ->select('guestBook')
