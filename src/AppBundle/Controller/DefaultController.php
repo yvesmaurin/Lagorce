@@ -38,19 +38,33 @@ class DefaultController extends Controller
     public function activitésAction(Request $request)
     {
         // replace this example code with whatever you need
-        return $this->render('default/activités.html.twig');
+        return $this->render('default/activites.html.twig');
     }
 
     /**
-     * @Route("/contact", name="contact")
+     * @Route("/contact/{page}", name="contact", defaults={"page": 1}, requirements={"page": "\d+"})
      */
-    public function contactAction(Request $request)
+    public function contactAction(Request $request, $page)
     {
-        $repo = $this->getDoctrine()->getRepository('AppBundle:GuestBook');
-        $guestBooks = $repo->findAll();
+        $maxArticles = 5;
+
+        $articles_count = count($this->getDoctrine()
+            ->getRepository('AppBundle:GuestBook')
+            ->findAll());
+
+        $pagination = array(
+            'page' => $page,
+            'route' => 'contact',
+            'pages_count' => ceil($articles_count / $maxArticles),
+            'route_params' => array()
+        );
+
+        $guestBooks = $this->getDoctrine()->getRepository('AppBundle:GuestBook')
+            ->getList($page, $maxArticles);
 
         return $this->render('default/contact.html.twig', array(
-            'guestBooks' => $guestBooks
+            'guestBooks' => $guestBooks,
+            'pagination' => $pagination
         ));
     }
 

@@ -1,0 +1,54 @@
+{% extends 'base.html.twig' %}
+
+{% set title_image = "banniereAdmin.jpg" %}
+{% set title = "Administration du site" %}
+{% set active = "admin" %}
+
+{% block body %}
+    <section class="cd-container">
+        <div class="row fluid">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                {% for message in app.session.flashbag.get('message') %}
+                    <p class="alert">{{ message }}</p>
+                {% endfor %}
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <h1>Les avis sur la maison</h1>
+                <h3>(0 en cours de validation)</h3>
+
+                {% for guestBook in guestBooks %}
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8">
+                            <p><b>{{ guestBook.nom }}</b>
+                                <br/>
+                                {{ guestBook.date|localizeddate('none', 'none', null, null, 'd MMMM Y') }}</p>
+                            <p>{{ guestBook.commentaire }}</p>
+                        </div>
+                        <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+                            <p>
+                                {% if guestBook.visible == true %}
+                                <a class="button-edit private"
+                                   href="{{ path('admin_contact_edit', {'idAvis': guestBook.id}) }}">Mettre
+                                    privé</a>
+                                {% else %}
+                                <a class="button-edit"
+                                   href="{{ path('admin_contact_edit', {'idAvis': guestBook.id}) }}">Mettre
+                                    public</a>
+                            {% endif %}
+                            <a class="button-delete"
+                               href="{{ path('admin_contact_delete', {'idAvis': guestBook.id}) }}"
+                               onclick="return confirm('Voulez-vous vraiment supprimer cet avis ?');">Supprimer</a>
+                            </p>
+                        </div>
+                    </div>
+                    <hr/>
+                {% endfor %}
+
+                {% include 'pagination.html.twig' %}
+            </div>
+        </div>
+    </section>
+{% endblock %}
+
+{% block javascripts %}
+{% endblock %}
