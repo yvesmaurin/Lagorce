@@ -33,6 +33,22 @@
 
     <script src="{{ asset('js/jquery-2.1.1.js') }}"></script> <!-- Jquery -->
     <script src="{{ asset('js/menu.js') }}"></script>
+
+    <!-- Piwik -->
+    <script type="text/javascript">
+        var _paq = _paq || [];
+        _paq.push(['trackPageView']);
+        _paq.push(['enableLinkTracking']);
+        (function() {
+            var u="//leliondor/analytics/piwik/";
+            _paq.push(['setTrackerUrl', u+'piwik.php']);
+            _paq.push(['setSiteId', 1]);
+            var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+            g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+        })();
+    </script>
+    <noscript><p><img src="//leliondor/analytics/piwik/piwik.php?idsite=1" style="border:0;" alt="" /></p></noscript>
+    <!-- End Piwik Code -->
 </head>
 <body>
 {% block navigation %}
@@ -44,7 +60,7 @@
                 <li{% if active == "maison" %} class="active"{% endif %}><a href="{{ path('maison') }}">La maison</a></li>
                 <li{% if active == "jardin" %} class="active"{% endif %}><a href="{{ path('maison') }}#jardin">Le jardin</a></li>
                 <li{% if active == "tourisme" %} class="active"{% endif %}><a href="{{ path('activités') }}">Activités</a></li>
-                <li{% if active == "contact" %} class="active"{% endif %}><a href="{{ path('contact') }}">Contact</a></li>
+                <li{% if active == "contact" %} class="active"{% endif %}><a href="{{ path('contact') }}">Contact/Tarif</a></li>
                 <li{% if active == "admin" %} class="active"{% endif %}><a href="{{ path('admin') }}">Admin</a></li>
             </ul>
         </nav> <!-- cd-primary-nav -->
@@ -62,7 +78,7 @@
                 <li{% if active == "maison" %} class="active"{% endif %}><a href="{{ path('maison') }}">La maison</a></li>
                 <li{% if active == "jardin" %} class="active"{% endif %}><a href="{{ path('maison') }}#jardin">Le jardin</a></li>
                 <li{% if active == "tourisme" %} class="active"{% endif %}><a href="{{ path('activités') }}">Activités</a></li>
-                <li{% if active == "contact" %} class="active"{% endif %}><a href="{{ path('contact') }}">Contact</a></li>
+                <li{% if active == "contact" %} class="active"{% endif %}><a href="{{ path('contact') }}">Contact/Tarif</a></li>
                 <li{% if active == "admin" %} class="active"{% endif %}><a href="{{ path('admin') }}">Admin</a></li>
             </ul>
         </nav>

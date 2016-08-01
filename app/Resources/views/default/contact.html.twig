@@ -60,7 +60,9 @@
                     <hr/>
                 {% endfor %}
 
+                {% if guestBooks|length > 5 %}
                 {% include 'pagination.html.twig' %}
+                {% endif %}
 
                 <form name='form_commentaire' method="post" action="{{ path('contact_add') }}">
                     <input id="nom" name="nom" type="text" required="true" placeholder="Nom"/>

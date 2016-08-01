@@ -39,16 +39,35 @@ class AdminController extends Controller
     /**
      * @Route("/admin/contact/edit/{idAvis}", name="admin_contact_edit", requirements={"idAvis": "\d+"})
      */
-    public function editContactAction(Request $request)
+    public function editContactAction(Request $request, $idAvis)
     {
+        $em = $this->getDoctrine()->getManager();
+
+        $guestBook = $this->getDoctrine()->getRepository('AppBundle:GuestBook')->find($idAvis);
+        $guestBook->setVisible(!$guestBook->getVisible());
+
+        $em->persist($guestBook);
+        $em->flush();
+
+        $this->addFlash('message', 'Ce commentaire a bien été modifié');
+
         return $this->redirectToRoute('admin');
     }
 
     /**
      * @Route("/admin/contact/delete/{idAvis}", name="admin_contact_delete", requirements={"idAvis": "\d+"})
      */
-    public function deleteContactAction(Request $request)
+    public function deleteContactAction(Request $request, $idAvis)
     {
+        $em = $this->getDoctrine()->getManager();
+
+        $guestBook = $this->getDoctrine()->getRepository('AppBundle:GuestBook')->find($idAvis);
+
+        $em->remove($guestBook);
+        $em->flush();
+
+        $this->addFlash('message', 'Ce commentaire a bien été supprimé');
+
         return $this->redirectToRoute('admin');
     }
 }

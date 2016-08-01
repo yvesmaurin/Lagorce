@@ -50,7 +50,7 @@ class DefaultController extends Controller
 
         $articles_count = count($this->getDoctrine()
             ->getRepository('AppBundle:GuestBook')
-            ->findAll());
+            ->findBy(array('visible' => true)));
 
         $pagination = array(
             'page' => $page,

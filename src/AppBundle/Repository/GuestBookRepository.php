@@ -24,6 +24,8 @@ class GuestBookRepository extends \Doctrine\ORM\EntityRepository
         $q = $this->_em->createQueryBuilder()
             ->select('guestBook')
             ->from('AppBundle:GuestBook','guestBook')
+            ->where('guestBook.visible = true')
+            ->orderBy('guestBook.date','DESC')
         ;
 
         $q->setFirstResult(($page-1) * $maxperpage)
@@ -45,6 +47,7 @@ class GuestBookRepository extends \Doctrine\ORM\EntityRepository
         $q = $this->_em->createQueryBuilder()
             ->select('guestBook')
             ->from('AppBundle:GuestBook','guestBook')
+            ->orderBy('guestBook.date','DESC')
         ;
 
         $q->setFirstResult(($page-1) * $maxperpage)
