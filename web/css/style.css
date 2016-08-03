@@ -802,6 +802,9 @@ footer {
 footer a:hover {
     text-decoration: underline;
 }
+section#mentions ul {
+    margin-bottom: 50px;
+}
 
 /* ADMIN */
 div#piwik {

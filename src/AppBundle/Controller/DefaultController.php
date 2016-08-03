@@ -111,4 +111,13 @@ class DefaultController extends Controller
 
         return $this->redirect($this->generateUrl('contact'));
     }
+
+    /**
+     * @Route("/mentions_legales", name="mentions")
+     */
+    public function mentionsAction(Request $request)
+    {
+        // replace this example code with whatever you need
+        return $this->render('default/mentions_legales.html.twig');
+    }
 }
