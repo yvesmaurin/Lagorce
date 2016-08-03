@@ -61,7 +61,7 @@
                 <li{% if active == "jardin" %} class="active"{% endif %}><a href="{{ path('maison') }}#jardin">Le jardin</a></li>
                 <li{% if active == "tourisme" %} class="active"{% endif %}><a href="{{ path('activités') }}">Activités</a></li>
                 <li{% if active == "contact" %} class="active"{% endif %}><a href="{{ path('contact') }}">Contact/Tarif</a></li>
-                <li{% if active == "admin" %} class="active"{% endif %}><a href="{{ path('admin') }}">Admin</a></li>
+                {% if is_granted('ROLE_ADMIN') %}<li{% if active == "admin" %} class="active"{% endif %}><a href="{{ path('admin') }}">Admin</a></li>{% endif %}
             </ul>
         </nav> <!-- cd-primary-nav -->
     </header>
@@ -79,7 +79,7 @@
                 <li{% if active == "jardin" %} class="active"{% endif %}><a href="{{ path('maison') }}#jardin">Le jardin</a></li>
                 <li{% if active == "tourisme" %} class="active"{% endif %}><a href="{{ path('activités') }}">Activités</a></li>
                 <li{% if active == "contact" %} class="active"{% endif %}><a href="{{ path('contact') }}">Contact/Tarif</a></li>
-                <li{% if active == "admin" %} class="active"{% endif %}><a href="{{ path('admin') }}">Admin</a></li>
+                {% if is_granted('ROLE_ADMIN') %}<li{% if active == "admin" %} class="active"{% endif %}><a href="{{ path('admin') }}">Admin</a></li>{% endif %}
             </ul>
         </nav>
     </div> <!-- .cd-secondary-nav -->
