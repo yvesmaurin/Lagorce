@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "60acf0aa4c4ac8a91d065e420a91f4d6",
+    "hash": "ecf010de041ee4324ef4a02ff3e263d8",
     "content-hash": "cf021accd3328b0e7fcee09832c9c6c0",
     "packages": [
         {
@@ -836,12 +836,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/FriendsOfSymfony/FOSUserBundle.git",
-                "reference": "edbf8401e81faaf570e54dcd3b35cfda953f1338"
+                "reference": "07ec96d93f03650e7480e0637fcd51eee6575c12"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/FriendsOfSymfony/FOSUserBundle/zipball/edbf8401e81faaf570e54dcd3b35cfda953f1338",
-                "reference": "edbf8401e81faaf570e54dcd3b35cfda953f1338",
+                "url": "https://api.github.com/repos/FriendsOfSymfony/FOSUserBundle/zipball/07ec96d93f03650e7480e0637fcd51eee6575c12",
+                "reference": "07ec96d93f03650e7480e0637fcd51eee6575c12",
                 "shasum": ""
             },
             "require": {
@@ -900,7 +900,7 @@
             "keywords": [
                 "User management"
             ],
-            "time": "2016-07-31 15:14:05"
+            "time": "2016-08-04 10:13:39"
         },
         {
             "name": "incenteev/composer-parameter-handler",

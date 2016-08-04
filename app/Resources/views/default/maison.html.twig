@@ -142,9 +142,9 @@
         </div>
 
         <div class="gallery">
-            <h2>Aperçu de la propriété</h2>
+            <div class="row">
+                <h2 class="title">Aperçu de la propriété</h2>
 
-            <div class="row center-xs">
                 <div class="my-gallery" itemscope itemtype="http://schema.org/ImageGallery">
 
                     <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
@@ -329,6 +329,8 @@
 {% endblock %}
 
 {% block javascripts %}
+    <script src="{{ asset('js/navigation.js') }}"></script>
+
     <!-- Core JS file -->
     <script src="{{ asset('js/photoswipe.min.js') }}"></script>
     <!-- UI JS file -->

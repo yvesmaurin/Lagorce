@@ -57,8 +57,8 @@
         <nav class="cd-primary-nav">
             <ul>
                 <li{% if active == "accueil" %} class="active"{% endif %}><a href="{{ path('homepage') }}">Accueil</a></li>
-                <li{% if active == "maison" %} class="active"{% endif %}><a href="{{ path('maison') }}">La maison</a></li>
-                <li{% if active == "jardin" %} class="active"{% endif %}><a href="{{ path('maison') }}#jardin">Le jardin</a></li>
+                <li id="lmaison"{% if active == "maison" %} class="active"{% endif %}><a href="{{ path('maison') }}">La maison</a></li>
+                <li id="ljardin"{% if active == "jardin" %} class="active"{% endif %}><a href="{{ path('maison') }}#jardin">Le jardin</a></li>
                 <li{% if active == "tourisme" %} class="active"{% endif %}><a href="{{ path('activités') }}">Activités</a></li>
                 <li{% if active == "contact" %} class="active"{% endif %}><a href="{{ path('contact') }}">Contact/Tarif</a></li>
                 {% if is_granted('ROLE_ADMIN') %}<li{% if active == "admin" %} class="active"{% endif %}><a href="{{ path('admin') }}">Admin</a></li>{% endif %}
@@ -75,8 +75,8 @@
         <nav>
             <ul>
                 <li{% if active == "accueil" %} class="active"{% endif %}><a href="{{ path('homepage') }}">Accueil</a></li>
-                <li{% if active == "maison" %} class="active"{% endif %}><a href="{{ path('maison') }}">La maison</a></li>
-                <li{% if active == "jardin" %} class="active"{% endif %}><a href="{{ path('maison') }}#jardin">Le jardin</a></li>
+                <li id="lmaison"{% if active == "maison" %} class="active"{% endif %}><a href="{{ path('maison') }}">La maison</a></li>
+                <li id="ljardin"{% if active == "jardin" %} class="active"{% endif %}><a href="{{ path('maison') }}#jardin">Le jardin</a></li>
                 <li{% if active == "tourisme" %} class="active"{% endif %}><a href="{{ path('activités') }}">Activités</a></li>
                 <li{% if active == "contact" %} class="active"{% endif %}><a href="{{ path('contact') }}">Contact/Tarif</a></li>
                 {% if is_granted('ROLE_ADMIN') %}<li{% if active == "admin" %} class="active"{% endif %}><a href="{{ path('admin') }}">Admin</a></li>{% endif %}
