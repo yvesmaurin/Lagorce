@@ -145,196 +145,109 @@
             <div class="row">
                 <h2 class="title">Aperçu de la propriété</h2>
 
-                <div class="my-gallery" itemscope itemtype="http://schema.org/ImageGallery">
-
-                    <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-                        <a href="{{ asset('img/gallery/porte.jpg') }}" itemprop="contentUrl"
-                           data-size="336x468">
-                            <img class="reponsive" src="{{ asset('img/gallery/porte.jpg') }}"
-                                 itemprop="thumbnail"
-                                 alt="Porte d'entrée"/>
+                <ul id="aniimated-thumbnials" class="list-unstyled row">
+                    <li class="col-xs-6 col-sm-4 col-md-3"
+                        data-src="{{ asset('img/gallery/porte.jpg') }}"
+                        data-sub-html="<h4>Porte d'entrée</h4>">
+                        <a href="">
+                            <img class="img-responsive" src="{{ asset('img/gallery/porte.jpg') }}" alt="porte"/>
                         </a>
-                        <figcaption itemprop="caption description">Porte</figcaption>
-                    </figure>
-
-                    <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-                        <a href="{{ asset('img/gallery/façade.jpg') }}" itemprop="contentUrl"
-                           data-size="2356x1852">
-                            <img class="reponsive" src="{{ asset('img/gallery/façade.jpg') }}"
-                                 itemprop="thumbnail"
-                                 alt="Façade"/>
+                    </li>
+                    <li class="col-xs-6 col-sm-4 col-md-3"
+                        data-src="{{ asset('img/gallery/façade.jpg') }}"
+                        data-sub-html="<h4>Façade</h4>">
+                        <a href="">
+                            <img class="img-responsive" src="{{ asset('img/gallery/façade.jpg') }}" alt="façade"/>
                         </a>
-                        <figcaption itemprop="caption description">Façade</figcaption>
-                    </figure>
-
-                    <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-                        <a href="{{ asset('img/gallery/entree.jpg') }}" itemprop="contentUrl"
-                           data-size="2392x1852">
-                            <img src="{{ asset('img/gallery/entree.jpg') }}"
-                                 itemprop="thumbnail"
-                                 alt="Entrée"/>
+                    </li>
+                    <li class="col-xs-6 col-sm-4 col-md-3"
+                        data-src="{{ asset('img/gallery/entree.jpg') }}"
+                        data-sub-html="<h4>Entrée</h4>">
+                        <a href="">
+                            <img class="img-responsive" src="{{ asset('img/gallery/entree.jpg') }}" alt="entrée"/>
                         </a>
-                        <figcaption itemprop="caption description">Entrée</figcaption>
-                    </figure>
-
-                    <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-                        <a href="{{ asset('img/gallery/entree2.jpg') }}" itemprop="contentUrl"
-                           data-size="2268x1796">
-                            <img src="{{ asset('img/gallery/entree2.jpg') }}"
-                                 itemprop="thumbnail"
-                                 alt="Entrée 2"/>
+                    </li>
+                    <li class="col-xs-6 col-sm-4 col-md-3"
+                        data-src="{{ asset('img/gallery/entree2.jpg') }}"
+                        data-sub-html="<h4>Entrée 2</h4>">
+                        <a href="">
+                            <img class="img-responsive" src="{{ asset('img/gallery/entree2.jpg') }}" alt="entrée2"/>
                         </a>
-                        <figcaption itemprop="caption description">Entré 2</figcaption>
-                    </figure>
-
-                    <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-                        <a href="{{ asset('img/gallery/cheminee.jpg') }}" itemprop="contentUrl"
-                           data-size="2560x1920">
-                            <img src="{{ asset('img/gallery/cheminee.jpg') }}"
-                                 itemprop="thumbnail"
-                                 alt="Cheminée"/>
+                    </li>
+                    <li class="col-xs-6 col-sm-4 col-md-3"
+                        data-src="{{ asset('img/gallery/cheminee.jpg') }}"
+                        data-sub-html="<h4>Cheminée</h4>">
+                        <a href="">
+                            <img class="img-responsive" src="{{ asset('img/gallery/cheminee.jpg') }}" alt="cheminée"/>
                         </a>
-                        <figcaption itemprop="caption description">Cheminée</figcaption>
-                    </figure>
-
-                    <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-                        <a href="{{ asset('img/gallery/sejour_bas.jpg') }}" itemprop="contentUrl"
-                           data-size="2560x1920">
-                            <img src="{{ asset('img/gallery/sejour_bas.jpg') }}"
-                                 itemprop="thumbnail"
-                                 alt="Séjour bas"/>
+                    </li>
+                    <li class="col-xs-6 col-sm-4 col-md-3"
+                        data-src="{{ asset('img/gallery/sejour_bas.jpg') }}"
+                        data-sub-html="<h4>Séjour bas</h4>">
+                        <a href="">
+                            <img class="img-responsive" src="{{ asset('img/gallery/sejour_bas.jpg') }}"
+                                 alt="séjour bas"/>
                         </a>
-                        <figcaption itemprop="caption description">Séjour bas</figcaption>
-                    </figure>
-
-                    <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-                        <a href="{{ asset('img/gallery/sejour_bas2.jpg') }}" itemprop="contentUrl"
-                           data-size="2560x1920">
-                            <img src="{{ asset('img/gallery/sejour_bas2.jpg') }}"
-                                 itemprop="thumbnail"
-                                 alt="Séjour bas 2"/>
+                    </li>
+                    <li class="col-xs-6 col-sm-4 col-md-3"
+                        data-src="{{ asset('img/gallery/sejour_bas2.jpg') }}"
+                        data-sub-html="<h4>Séjour bas 2</h4>">
+                        <a href="">
+                            <img class="img-responsive" src="{{ asset('img/gallery/sejour_bas2.jpg') }}"
+                                 alt="séjour bas 2"/>
                         </a>
-                        <figcaption itemprop="caption description">Séjour bas 2</figcaption>
-                    </figure>
-
-                    <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-                        <a href="{{ asset('img/gallery/vue_cour.jpg') }}" itemprop="contentUrl"
-                           data-size="3264x2448">
-                            <img src="{{ asset('img/gallery/vue_cour.jpg') }}"
-                                 itemprop="thumbnail"
-                                 alt="Vue cour"/>
+                    </li>
+                    <li class="col-xs-6 col-sm-4 col-md-3"
+                        data-src="{{ asset('img/gallery/vue_cour.jpg') }}"
+                        data-sub-html="<h4>Vue cour</h4>">
+                        <a href="">
+                            <img class="img-responsive" src="{{ asset('img/gallery/vue_cour.jpg') }}" alt="vue cour"/>
                         </a>
-                        <figcaption itemprop="caption description">Vue cour</figcaption>
-                    </figure>
-
-                    <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-                        <a href="{{ asset('img/gallery/cour.jpg') }}" itemprop="contentUrl"
-                           data-size="2560x1920">
-                            <img src="{{ asset('img/gallery/cour.jpg') }}"
-                                 itemprop="thumbnail"
-                                 alt="Cour"/>
+                    </li>
+                    <li class="col-xs-6 col-sm-4 col-md-3"
+                        data-src="{{ asset('img/gallery/cour.jpg') }}"
+                        data-sub-html="<h4>Cour</h4>">
+                        <a href="">
+                            <img class="img-responsive" src="{{ asset('img/gallery/cour.jpg') }}" alt="cour"/>
                         </a>
-                        <figcaption itemprop="caption description">Cour</figcaption>
-                    </figure>
-
-                    <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-                        <a href="{{ asset('img/gallery/cour2.jpg') }}" itemprop="contentUrl"
-                           data-size="1920x2560">
-                            <img src="{{ asset('img/gallery/cour2.jpg') }}"
-                                 itemprop="thumbnail"
-                                 alt="Cour 2"/>
+                    </li>
+                    <li class="col-xs-6 col-sm-4 col-md-3"
+                        data-src="{{ asset('img/gallery/cour2.jpg') }}"
+                        data-sub-html="<h4>Cour 2</h4>">
+                        <a href="">
+                            <img class="img-responsive" src="{{ asset('img/gallery/cour2.jpg') }}" alt="cour 2"/>
                         </a>
-                        <figcaption itemprop="caption description">Cour 2</figcaption>
-                    </figure>
-
-                    <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-                        <a href="{{ asset('img/gallery/montee_jardin.jpg') }}" itemprop="contentUrl"
-                           data-size="2560x1920">
-                            <img src="{{ asset('img/gallery/montee_jardin.jpg') }}"
-                                 itemprop="thumbnail"
-                                 alt="Montée jardin"/>
+                    </li>
+                    <li class="col-xs-6 col-sm-4 col-md-3"
+                        data-src="{{ asset('img/gallery/montee_jardin.jpg') }}"
+                        data-sub-html="<h4>Montée jardin</h4>">
+                        <a href="">
+                            <img class="img-responsive" src="{{ asset('img/gallery/montee_jardin.jpg') }}"
+                                 alt="montee jardin"/>
                         </a>
-                        <figcaption itemprop="caption description">Montée jardin</figcaption>
-                    </figure>
-                </div>
+                    </li>
+                </ul>
+
             </div>
         </div>
     </section>
-
-    <!-- Root element of PhotoSwipe. Must have class pswp. -->
-    <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
-
-        <!-- Background of PhotoSwipe.
-             It's a separate element, as animating opacity is faster than rgba(). -->
-        <div class="pswp__bg"></div>
-
-        <!-- Slides wrapper with overflow:hidden. -->
-        <div class="pswp__scroll-wrap">
-
-            <!-- Container that holds slides. PhotoSwipe keeps only 3 slides in DOM to save memory. -->
-            <!-- don't modify these 3 pswp__item elements, data is added later on. -->
-            <div class="pswp__container">
-                <div class="pswp__item"></div>
-                <div class="pswp__item"></div>
-                <div class="pswp__item"></div>
-            </div>
-
-            <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
-            <div class="pswp__ui pswp__ui--hidden">
-
-                <div class="pswp__top-bar">
-
-                    <!--  Controls are self-explanatory. Order can be changed. -->
-
-                    <div class="pswp__counter"></div>
-
-                    <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
-
-                    <button class="pswp__button pswp__button--share" title="Share"></button>
-
-                    <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
-
-                    <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
-
-                    <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
-                    <!-- element will get class pswp__preloader--active when preloader is running -->
-                    <div class="pswp__preloader">
-                        <div class="pswp__preloader__icn">
-                            <div class="pswp__preloader__cut">
-                                <div class="pswp__preloader__donut"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
-                    <div class="pswp__share-tooltip"></div>
-                </div>
-
-                <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
-                </button>
-
-                <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
-                </button>
-
-                <div class="pswp__caption">
-                    <div class="pswp__caption__center"></div>
-                </div>
-
-            </div>
-
-        </div>
-
-    </div>
 {% endblock %}
 
 {% block javascripts %}
     <script src="{{ asset('js/navigation.js') }}"></script>
 
-    <!-- Core JS file -->
-    <script src="{{ asset('js/photoswipe.min.js') }}"></script>
-    <!-- UI JS file -->
-    <script src="{{ asset('js/photoswipe-ui-default.min.js') }}"></script>
-    <!-- Options Photoswipe -->
-    <script src="{{ asset('js/photoswipe.option.js') }}"></script>
+    <!-- jQuery version must be >= 1.8.0; -->
+    <script src="{{ asset('js/lightgallery.js') }}"></script>
+    <!-- A jQuery plugin that adds cross-browser mouse wheel support. (Optional) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js"></script>
+    <!-- lightgallery plugins -->
+    <script src="{{ asset('js/lg-thumbnail.js') }}"></script>
+    <script src="{{ asset('js/lg-fullscreen.js') }}"></script>
+
+    <script>
+        $('#aniimated-thumbnials').lightGallery({
+            thumbnail:true,
+            download:false
+        });
+    </script>
 {% endblock %}

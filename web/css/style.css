@@ -706,25 +706,15 @@ section#jardin {
 .gallery h2 {
     margin-bottom: 30px;
 }
-.my-gallery {
-    margin: 0 auto!important;
-}
 
-.my-gallery img {
-    width: 100%;
-    height: auto;
-}
-
-.my-gallery figure {
-    display: block;
-    float: left;
-    margin: 0 5px 5px 0;
-    max-width: 292px;
+.gallery li {
+    max-height: 219px;
     overflow: hidden;
+    margin-bottom: 15px;
 }
 
-.my-gallery figcaption {
-    display: none;
+.gallery img {
+    overflow: hidden;
 }
 
 /* LES ACTIVITES */
@@ -964,9 +954,6 @@ div#piwik {
         padding-top: 60px;
     }
 
-    .my-gallery figure {
-        max-width: 146px;
-    }
     .fluid {
         margin-bottom:50px;
     }
